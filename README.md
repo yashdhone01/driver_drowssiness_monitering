@@ -1,10 +1,6 @@
 ```markdown
 # Real-Time Driver Drowsiness Detection & Escalation Suite
 
-[![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org)
-[![OpenCV](https://img.shields.io/badge/OpenCV-4.x-green.svg)](https://opencv.org)
-[![MediaPipe](https://img.shields.io/badge/MediaPipe-Latest-orange.svg)](https://google.github.io/mediapipe/)
-
 An enterprise-grade, edge-ready Computer Vision pipeline designed to detect driver fatigue and micro-sleep events in real time. Moving beyond simple frame-by-frame thresholding, this system integrates robust time-series mathematical metrics with an algorithmic escalation ladder to eliminate false positives and prevent alert fatigue.
 
 ---
@@ -107,4 +103,3 @@ Contributions regarding performance optimization for embedded targets (Raspberry
 
 ```
 
-```
