@@ -1,0 +1,37 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PyInstaller / Environments
+env/
+venv/
+.env
+.venv
+ENV/
+env.bak/
+venv.bak/
+
+# Machine Learning models & data sets
+*.pkl
+*.csv
+*.h5
+*.keras
+*.pt
+datasets/
+
+# Logs and incident reports
+incidents/
+logs.txt
+pip_log.txt
+results.txt
+*.log
+
+# Generated warning assets
+*.jpg
+*.png
+*.mp3
+
+# OS generated files
+.DS_Store
+Thumbs.db
