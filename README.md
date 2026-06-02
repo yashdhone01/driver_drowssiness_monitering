@@ -9,7 +9,7 @@ An enterprise-grade, edge-ready Computer Vision pipeline designed to detect driv
 
 ---
 
-## 🛠️ Key Architectural Features
+## Key Architectural Features
 
 * **Advanced Facial Landmark Ingestion:** Utilizes **MediaPipe Face Mesh** to track high-fidelity facial geometry and isolate ocular coordinate maps dynamically across variable lighting conditions.
 * **Mathematical Fatigue Metrics:**
@@ -20,15 +20,17 @@ An enterprise-grade, edge-ready Computer Vision pipeline designed to detect driv
 
 ---
 
-## Tech Stack 
+## Tech Stack
 
 * **Core Logic:** Python 3.9+
 * **Computer Vision & Graphics:** OpenCV, MediaPipe
 * **State Simulation & UI:** Pygame
 * **Analytics Engine:** Scikit-learn, NumPy (for vector geometry computations)
-* **Algorithmic Patterns:** Leaky Bucket Rate Limiting, Finite State Machines (FSM)
+* **Design Patterns:** Leaky Bucket Rate Limiting, Finite State Machines (FSM)
 
 ---
+
+## 📐 System Architecture
 
 ### Temporal Smoothing & Escalation Pipeline
 
@@ -80,28 +82,28 @@ An enterprise-grade, edge-ready Computer Vision pipeline designed to detect driv
 
 ## ⚙️ Configuration & Parameters
 
-You can fine-tune the tracking sensitivity and the Leaky Bucket drain rate directly inside `config.py` to match specific hardware conditions or environmental contexts:
+You can fine-tune the tracking sensitivity and the Leaky Bucket drain rate directly inside `config.py` to match specific hardware configurations or cabin environments:
 
 | Parameter | Default Value | Description |
 | --- | --- | --- |
-| `EAR_THRESHOLD` | `0.25` | The baseline aspect ratio threshold below which an eye is considered closed. |
-| `BUCKET_CAPACITY` | `100` | Total capacity of the leaky bucket before triggering a Level 3 critical alarm. |
-| `LEAK_RATE` | `5` | The steady amount of "fatigue value" subtracted per frame when eyes are open. |
-| `ROLLING_WINDOW_SECS` | `60` | The temporal tracking period used to compute localized PERCLOS percentages. |
+| `EAR_THRESHOLD` | `0.25` | The baseline aspect ratio threshold below which an eye is flagged as closed. |
+| `BUCKET_CAPACITY` | `100` | Total capacity threshold of the leaky bucket before triggering a Level 3 critical alarm. |
+| `LEAK_RATE` | `5` | The steady amount of "fatigue value" drained per frame when the eyes are detected open. |
+| `ROLLING_WINDOW_SECS` | `60` | The temporal sliding window tracking length used to compute localized PERCLOS percentages. |
 
 ---
 
 ## 📊 Performance Benchmarks
 
-* **Inference Latency:** $\le$ 12ms per frame on standard consumer CPU hardware (Edge-deployable).
-* **Ocular Tracking Stability:** Maintains coordinate lock at up to $30^\circ$ head yaw/pitch variations.
-* **False Positive Rate:** Reduced by **84%** compared to traditional non-windowed thresholding systems due to the structural dampening of the Leaky Bucket state machine.
+* **Inference Latency:** $\le$ **12ms** per frame on standard consumer CPU hardware (highly edge-deployable).
+* **Ocular Tracking Stability:** Maintains an active spatial coordinate lock at up to **$30^\circ$** head yaw/pitch variations.
+* **False Positive Rate:** Reduced by **84%** compared to traditional static-thresholding systems due to the structural smoothing of the Leaky Bucket state machine.
 
 ---
 
 ## 🤝 Contributing
 
-Contributions regarding optimization for embedded targets (Raspberry Pi, NVIDIA Jetson Nano) or expanding the architectural model to evaluate **Yawning Frequency (MAR - Mouth Aspect Ratio)** are highly encouraged. Please open an issue or submit a pull request!
+Contributions regarding performance optimization for embedded targets (Raspberry Pi, NVIDIA Jetson Nano) or expanding the architectural engine to evaluate **Yawning Frequency (MAR - Mouth Aspect Ratio)** are welcome. Please open an issue or submit a pull request!
 
 ```
 
